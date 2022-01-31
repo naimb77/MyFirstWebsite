@@ -1,0 +1,895 @@
+:root {
+    --m-small: .3rem;
+    --m-medium: .7rem;
+    --m-big: 1.2rem;
+
+    --p-small: .3rem;
+    --p-medium: .7rem;
+    --p-big: 1.2rem;
+
+    --black: rgb(26,26,26);
+    --gray: rgb(51,51,51);
+    --white: rgb(242,242,242);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+body, header, main, section, article, footer, aside, nav {
+    margin: 20px;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    'header header header',
+    'main main main',
+    'footer footer footer';
+
+    grid-gap: 5px;
+    width: auto;
+    max-width: 1600px;
+    margin: 0 auto;
+    
+
+    /* background image and adjusted */
+    background-image: url('/images/background1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+p{
+    font-size: 18px;
+}
+
+
+i{
+    font-size: 18px;
+}
+
+h1{
+    color: var(--white);
+    text-align: center;
+}
+
+.naim-container {
+    width: auto;
+    max-width: 1750px;
+}
+
+
+/* Header */
+header{
+    grid-area: header;
+    display: flex;
+    background-color: rgba(242,242,242, 30%);
+}
+
+header .naim-logo{
+    max-height: 150px;
+    max-width: 150px;
+    height: auto;
+    width: auto;
+
+    margin-left: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+header .naim-navbar{
+    margin: auto;
+    display: flex;
+}
+
+header .naim-navbar a{
+    background-color: var(--gray);
+    color: var(--white);
+    padding: var(--p-small);
+    margin: var(--m-small);
+    text-decoration: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+header .naim-navbar a:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    background-color: rgb(3,9,15);
+    transform: scale(1.01);
+    transition: all 0.3s ease 0s;
+}
+
+#naim-placeholder{
+    width: 142px;
+}
+
+/* Main */
+main{
+    grid-area: main;
+    background-color: rgba(242,242,242, 30%);
+    padding: 5px;
+}
+
+.naim-beschrijving {
+    text-align: left;
+    color: var(--white);
+    background-color: var(--gray);
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 10px;
+    margin-bottom: 50px;
+    border-radius: 40px 0px;
+}
+
+.naim-beschrijving a{
+    color: var(--white);
+    font-size: 18px;
+}
+
+.naim-bezienswaardigheid{
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 40px 0px;
+    text-align: left;
+    margin: 10px;
+    margin-bottom: 50px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.naim-bezienswaardigheid > div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.naim-bezienswaardigheid > img{
+    width: auto;
+    max-width: 35%;
+    object-fit: cover;
+}
+
+.naim-bezienswaardigheid a{
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.naim-info-knop {
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--gray);
+}
+
+.naim-info-knop:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    background-color: var(--black);
+    color: var(--white);
+    transform: scale(1.01);
+    transition: all 0.3s ease 0s;
+}
+
+/* external css: flickity.css */
+
+.carousel {
+    background: #EEE;
+    max-width: 80%;
+    width:auto;
+    height: 500px;
+    margin-right: 10px;
+    margin: auto;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+  }
+  
+  .carousel-cell {
+    max-width: 105%;
+    width:auto;
+    height: 500px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+/* END */
+
+/* Footer */
+footer{
+    grid-area: footer;
+    background-color: rgba(242,242,242, 30%);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.naim-item-container{
+    display: flex;
+    align-items: center;
+}
+
+.naim-item-container > p{
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.naim-item-sm{
+    margin-right: 20px;
+
+}
+
+footer > p{
+    font-size: 22px;
+}
+
+
+.naim-contact-knop{
+    color: var(--white);
+}
+/* END */
+
+/* Contact */
+#forms{
+    width: 74%;
+    justify-self: left;
+    margin-right: 10px;
+}
+
+.naim-main-section{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.naim-map{
+    width: 50%;
+    justify-self: right;
+    margin-top: 17px;
+}
+    
+.naim-gmap {
+    height:500px;
+}
+
+.naim-info-me{
+    justify-self: right;
+    margin-top: 20px;
+    background-color: var(--gray);
+    border-radius: 40px 0px;
+    padding-left: 20px;
+    color: var(--white);
+    padding-bottom: 10px;
+    padding-right: 20px;
+    max-height: 400px;
+}
+
+#contact-map { 
+    height: 400px; 
+
+}
+
+form fieldset{
+    background-color: var(--gray);
+    border-radius: 40px 0px;
+    border: none;
+    color: var(--white);
+    width: auto;
+    max-width: 100%;
+}
+
+fieldset label {
+    position: relative;
+    display: inline-block;
+    font-size: 0.8rem;
+    min-width: 8rem;
+}
+
+fieldset input[type="text"], fieldset input[type="email"], #land, #bericht, #contact-persoon {
+    position: relative;
+    width: 75%;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#bericht{
+    width: 98%;
+}
+
+#verzendknop{
+    background-color: var(--white);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--gray);
+}
+
+#verzendKnop:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    background-color: var(--black);
+    color: var(--white);
+    transform: scale(1.01);
+    transition: all 0.3s ease 0s;
+}
+
+.naim-info-me table{
+    width: 100%;
+    
+}
+
+.naim-info-me td{
+    font-size: 18px;
+}
+/* END */
+
+/* Trips */
+.naim-zoek-knop{
+    margin: auto;
+    text-align: center;
+}
+
+#zoek{
+    border-radius: 10px 0px 0px 10px;
+    border: none;
+}
+
+#zoek-knop{
+    padding: 1px 3px;
+    margin-top: 8px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+}
+
+#zoek-knop:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    background-color: var(--black);
+    color: var(--white);
+    transform: scale(1.01);
+    transition: all 0.3s ease 0s;
+}
+
+.naim-item-container-trips{
+    display: grid;
+    grid-template-areas: 
+    'statue-liberty times-square central-park'
+    'memorial-park guggenheim-museum city-hall-station';
+    color: var(--white);
+    justify-items: center;
+}
+
+#statue-liberty{grid-area: statue-liberty;}
+#times-square{grid-area: times-square;}
+#central-park{grid-area: central-park;}
+
+#memorial-park{grid-area: memorial-park;}
+#guggenheim-museum{grid-area: guggenheim-museum;}
+#city-hall-station{grid-area: city-hall-station;}
+
+main .naim-item-trips{
+    background-color: var(--gray);
+    max-width: 15rem;
+    width:auto;
+    margin: 5xp;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    border-radius: 40px 0px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+.naim-trips-caption{
+    font-size: 15px;
+    border: 3px solid var(--white);
+    color: var(--white);
+    margin-left: 10px;
+    margin-right: 6px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+.naim-item-trips figure > img{
+    height: auto;
+    width: auto;
+}
+
+#statue-liberty > figure > img {
+    max-width: 45%;
+}
+
+#times-square > figure > img{
+    max-width: 80%;
+}
+
+#central-park  > figure > img{
+    max-width: 80%;
+}
+
+#memorial-park  > figure > img{
+    max-width: 65%;
+}
+
+#guggenheim-museum  > figure > img{
+    max-width: 80%;
+}
+
+#city-hall-station  > figure > img{
+    max-width: 70%;
+}
+
+#statue-liberty > p{
+    margin-bottom: 8px;
+}
+
+#times-square > p{
+    margin-bottom: 20px;
+}
+
+#central-park > p{
+    margin-bottom: 0px;
+}
+
+#memorial-park > p{
+    margin-bottom: 20px;
+}
+
+#guggenheim-museum > p{
+    margin-bottom: 40px;
+}
+
+#city-hall-station > p{
+    margin-bottom: 45px;
+}
+
+.naim-info-knop-trips{
+    background-color: var(--white);
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--gray);
+}
+
+.naim-info-knop-trips:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    background-color: var(--black);
+    color: var(--white);
+    transform: scale(1.01);
+    transition: all 0.3s ease 0s;
+}
+/* END */
+
+.naim-statue-liberty-section{
+    display: grid;
+    grid-template-areas: 
+    'info picture'
+    'info picture'
+    'form picture'
+    'map map';
+
+    gap: 10px;
+    margin: 0;
+}
+
+.naim-info-article{grid-area: info;}
+.naim-form-article{grid-area: form;}
+
+#statue-liberty-img{grid-area: picture;}
+#statue-liberty-map{grid-area: map;}
+
+#central-park-map{grid-area:map;}
+#central-park-img{grid-area:picture;}
+
+#city-hall-station-map{grid-area:map;}
+#city-hall-station-img{grid-area:picture;}
+
+#guggenheim-museum-map{grid-area:map;}
+#guggenheim-museum-img{grid-area:picture;}
+
+#memorial-park-map{grid-area:map;}
+#memorial-park-img{grid-area:picture;}
+
+#times-square-map{grid-area:map;}
+#times-square-img{grid-area:picture;}
+
+.naim-info-article{
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 40px 0px;
+    padding: 10px;
+    padding-top: 1px;
+}
+
+.naim-form-article{
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 40px 0px;
+    padding: 12px;
+}
+
+#recensie{
+    width: 100%;
+    max-height: 10%;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+#verzend-knop2:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,2);
+    background-color: var(--black);
+    color: var(--white);
+    transform: scale(1.01);
+    transition: all 0.3s ease 0s;
+}
+
+/* Statue of Liberty */
+#statue-liberty-img > figure{
+    margin:auto;
+    background-color: var(--gray);
+    padding: 20px;
+    border-radius: 40px 0px;
+    text-align: center;
+    margin-right: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#statue-liberty-map { 
+    height: 500px; 
+    width: 97%;
+    margin-left: 20px;
+    margin: auto;
+    
+} 
+/* END */
+
+/* Central Park */
+#central-park-map{
+    height: 500px;
+    width: 97%;
+    margin-left: 20px;
+    margin: auto;
+}
+
+#central-park-img > figure > img{
+    max-height: 280px;
+    max-width: 500px;
+    height: auto;
+    width: auto;
+}
+
+#central-park-img > figure{
+    margin:auto;
+    background-color: var(--gray);
+    padding: 20px;
+    border-radius: 40px 0px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+/* END */
+
+/* Guggenheim Museum */
+#guggenheim-museum-map{
+    height: 500px;
+    width: 97%;
+    margin-left: 20px;
+    margin: auto;
+    
+}
+
+#guggenheim-museum-img > figure > img{
+    max-height: 280px;
+    max-width: 500px;
+    height: auto;
+    width: auto;
+}
+
+#guggenheim-museum-img > figure{
+    margin:auto;
+    background-color: var(--gray);
+    padding: 20px;
+    border-radius: 40px 0px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+/* END */
+
+/* 9/11 Memorial Park */
+#memorial-park-map{
+    height: 500px;
+    width: 97%;
+    margin-left: 20px;
+    margin: auto;
+    
+}
+
+#memorial-park-img > figure > img{
+    max-height: 280px;
+    max-width: 500px;
+    height: auto;
+    width: auto;
+}
+
+#memorial-park-img > figure{
+    margin:auto;
+    background-color: var(--gray);
+    padding: 20px;
+    border-radius: 40px 0px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+/* END */
+
+/* Times Square */
+#times-square-map{
+    height: 500px;
+    width: 97%;
+    margin-left: 20px;
+    margin: auto;
+}
+
+#times-square-img > figure > img{
+    max-height: 500px;
+    max-width: 500px;
+    height: auto;
+    width: auto;
+}
+
+#times-square-img > figure{
+    margin:auto;
+    background-color: var(--gray);
+    padding: 20px;
+    border-radius: 40px 0px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+/* END */
+
+/* City Hall Station */
+#city-hall-station-map{
+    height: 500px;
+    width: 97%;
+    margin-left: 20px;
+    margin: auto;
+    
+}
+
+#city-hall-station-img > figure > img{
+    max-height: 500px;
+    max-width: 500px;
+    height: auto;
+    width: auto;
+}
+
+#city-hall-station-img > figure{
+    margin:auto;
+    background-color: var(--gray);
+    padding: 20px;
+    border-radius: 40px 0px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+/* END */
+
+.naim-geolocatie{
+    border-collapse: collapse;
+    overflow-x: auto;
+    margin: auto;
+}
+
+.naim-geolocatie th, .naim-geolocatie td{
+    border: 3px var(--black) solid;
+    padding: 5px;
+}
+
+.naim-geolocatie td{
+    font-size:18px;
+    padding: 5px;
+    background-color: rgb(83, 83, 83);
+}
+
+.naim-geolocatie tr:hover{
+    box-shadow: 0 2px 10px rgba(0,0,0,2);
+    background-color: var(--white);
+    color: var(--gray);
+    transform: scale(1.01);
+    transition: all 0.3s ease 0s;
+}
+
+.naim-active {
+    background-color: #717171;
+}
+
+
+/* @media only screen and (max-width: 618px){
+    header .naim-navbar{
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: initial;
+        margin-left: auto;
+    }
+
+    #naim-placeholder{
+        display: none;
+    }
+} */
+
+@media only screen and (max-width: 600px) {
+    footer{
+        flex-direction: column;
+    }
+    header .naim-navbar{
+        flex-direction: column;
+        justify-content: flex-end;
+        margin: initial;
+        margin-left: auto;
+    }
+
+    #naim-placeholder{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .naim-bezienswaardigheid {
+        max-height: 250px;
+    }
+}
+
+@media only screen and (max-width: 780px){
+    .naim-bezienswaardigheid {
+        flex-direction: column;
+
+    }
+
+    .naim-bezienswaardigheid > img{
+        max-width: 100%;
+    }
+
+    .naim-statue-liberty-section p{
+        font-size: 14px;
+    }
+
+    .naim-geolocatie td, .naim-geolocatie th{
+        font-size: 10px;
+    }
+
+    #statue-liberty-img > figure > img{
+        max-width: 300px;
+    }
+
+    #central-park-img > figure > img{
+        max-width: 300px;
+    }
+
+    #guggenheim-museum-img > figure > img{
+        max-width: 300px;
+    }
+    #memorial-park-img > figure > img{
+        max-width: 300px;
+    }
+    #times-square-img > figure > img{
+        max-width: 300px;
+    }
+    #city-hall-station-img > figure > img{
+        max-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 470px){
+    #statue-liberty-img > figure > img{
+        width: 100%;
+    }
+
+    #central-park-img > figure > img{
+        width: 100%;
+    }
+
+    #guggenheim-museum-img > figure > img{
+        width: 100%;
+    }
+    #memorial-park-img > figure > img{
+        width: 100%;
+    }
+    #times-square-img > figure > img{
+        width: 100%;
+    }
+    #city-hall-station-img > figure > img{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1205px) {
+    .naim-item-container-trips{
+        grid-template-areas: 
+        'statue-liberty times-square'
+        'central-park memorial-park'
+        'guggenheim-museum city-hall-station';
+    }
+}
+@media only screen and (max-width: 837px) {
+    .naim-item-container-trips{
+        grid-template-areas: 
+        'statue-liberty' 
+        'times-square'
+        'central-park' 
+        'memorial-park'
+        'guggenheim-museum'
+        'city-hall-station';
+    }
+}
+
+@media only screen and (max-width: 1006px){
+    .naim-main-section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #forms{
+        width: 100%;
+    }
+
+    .naim-map{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1580px){
+    .naim-statue-liberty-section{
+        display: grid;
+        grid-template-areas: 
+        'info'
+        'form'
+        'picture'
+        'map';
+        width: auto;
+        align-items: center;
+    }
+}

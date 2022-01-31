@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-Trip | Detail (Statue of Liberty)</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="/js/script-statue-liberty.js" defer></script>
+</head>
+
+<body>
+    <div class="naim-container">
+        <header>
+            <a href="index.html"><img src="/images/svg/logo.png" alt="logo" title="logo" class="naim-logo"></a>
+            <nav class="naim-navbar">
+                <a href="index.html">Home</a>
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div id="naim-placeholder"></div>
+        </header>
+        <main>
+            <section class="naim-statue-liberty-section">
+                <article class="naim-info-article">
+                    <h1>The Statue of Liberty</h1>
+                    <p>Hét symbool van New York City. Dit 93 meter hoge standbeeld was een cadeau van Frankrijk
+                        ter
+                        ere
+                        van de Amerikaanse vrijheid. De dame staat in New York sinds 1886 en draagt een fakkel
+                        in
+                        haar
+                        rechterhand en een tablet met de datum van de Amerikaanse onafhankelijkheidsverklaring
+                        (JULY
+                        IV
+                        MDCCLXXVI (July 4, 1776)) in haar linkerhand. We kunnen the Satue of Liberty bezichtigen
+                        in
+                        de
+                        New York Harbor en kunnen met een lift of via een trap de observatiedekken betreden. Een
+                        observatiedek is te vinden in de pedestal van het standbeeld en de tweede in de kroon.
+                        Vanuit de
+                        dekken kan je genieten van een zicht op het water en de haven.
+                        Als je meer te vinden bent voor hoge gebouwen en stadskernen, is de volgende stop meer
+                        iets
+                        voor jou, namelijk Times Square.
+                    </p>
+                    <table class="naim-geolocatie">
+                        <tr>
+                            <th>Geolocatie</th>
+                            <th>Breedte(X)</th>
+                            <th>Lengte(Y)</th>
+                        </tr>
+                        <tr>
+                            <td>Statue of Liberty</td>
+                            <td>40.689477</td>
+                            <td>-74.044511</td>
+                        </tr>
+                    </table>
+                </article>
+                <article class="naim-form-article">
+                    <form action="#" method="GET">
+                        <textarea name="bericht" id="recensie" cols="30" rows="5"
+                            placeholder="Vul je recensie hier in..."></textarea><br>
+                        <input type="radio" name="like-dislike" id="like">Vind ik leuk<br>
+                        <input type="radio" name="like-dislike" id="dislike">Vind ik niet leuk<br><br>
+                        <button type="submit" id="verzend-knop2">Verzenden</button>
+                    </form>
+                </article>
+                <div id="statue-liberty-img">
+                    <figure>
+                        <img src="/images/bezienswaardigheid_statueofliberty.jpg" alt="Statue of Liberty">
+                        <figcaption class="naim-trips-caption">Bron: © Goodshot/Jupiterimages</figcaption>
+                    </figure>
+                </div>
+                <div id="statue-liberty-map"></div>
+            </section>
+        </main>
+        <footer>
+            <div class="naim-item-container">
+                <p>Social media:</p>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/svg/facebook.svg"
+                        alt="Facebook logo" title="Facebook" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/svg/instagram.svg"
+                        alt="Instagram logo" title="Instagram" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="images/svg/twitter.svg" alt="Twitter logo"
+                        title="Twitter" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="images/svg/youtube.svg" alt="YouTube logo"
+                        title="YouTube" height="25px" width="" class="naim-item-sm"></a>
+            </div>
+            <p>Website by Naim Baysal ©<br><a href="contact.html" class="naim-contact-knop">Contacteer ons</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

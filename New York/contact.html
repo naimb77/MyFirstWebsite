@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-Trip | Contact</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="/js/script-contact.js" defer></script>
+
+</head>
+
+<body>
+    <div class="naim-container">
+        <header>
+            <a href="index.html"><img src="/images/svg/logo.png" alt="logo" title="logo" class="naim-logo"></a>
+            <nav class="naim-navbar">
+                <a href="index.html">Home</a>
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div id="naim-placeholder"></div>
+    </header>
+        <main>
+            <section class="naim-main-section">
+                <form action="#" method="GET" id="forms">
+                    <fieldset>
+                        <legend>Contactgegevens</legend>
+                        <label for="contact-persoon">Wie wil je contacteren</label>
+                        <select name="contact-persoon" id="contact-persoon">
+                            <option value="WD">Webdesigner</option>
+                            <option value="O">Organisator</option>
+                        </select><br>
+                        <label for="voornaam">Voornaam: *</label>
+                        <input type="text" name="voornaam" id="voornaam" required><br>
+                        <label for="naam">Naam: *</label>
+                        <input type="text" name="naam" id="naam" required><br>
+                        <label for="email">E-Mail: *</label>
+                        <input type="email" name="email" id="email" placeholder="user@hotmail.com" required><br>
+                        <label for="telefoonnummer">Telefoonnummer: *</label>
+                        <input type="text" name="telefoonnummer" id="telefoonnummer" placeholder="+32 XXX XX XX XX" required><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Adresgegevens</legend>
+                        <label for="adress1">Adress1: *</label>
+                        <input type="text" name="adress1" id="adress1" required><br>
+                        <label for="postcode">Postcode:</label>
+                        <input type="text" name="postcode" id="postcode"><br>
+                        <label for="stad">Stad:</label>
+                        <input type="text" name="stad" id="stad"><br>
+                        <label for="land">Kies een land:</label>
+                        <select name="land" id="land">
+                            <option value="BE">België</option>
+                            <option value="DE">Duitsland</option>
+                            <option value="FR">Frankrijk</option>
+                            <option value="NL">Nederland</option>
+                            <option value="UK">Verenigd Koninkrijk</option>
+                        </select><br>
+                        <textarea name="bericht" id="bericht" cols="30" rows="10"></textarea><br>
+                        <button type="submit" id="verzendKnop">Verzenden</button>
+                    </fieldset>
+                </form>
+                <div class="naim-map">
+                    <div id="contact-map"></div>
+                    <div class="naim-info-me">
+                        <h1>Contacteer Organisator / Webdesigner</h1>
+                        <table>
+                            <tr>
+                                <td>Naam:</td>
+                                <td>Naim Baysal</td>
+                            </tr>
+                            <tr>
+                                <td>Adress:</td>
+                                <td>Dillesstraat 50, 2660 HOBOKEN</td>
+                            </tr>
+                            <tr>
+                                <td>E-Mail:</td>
+                                <td>NaimB77@hotmail.be</td>
+                            </tr>
+                            <tr>
+                                <td>GSM-Nummer:</td>
+                                <td>+32 484 51 92 24</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="naim-item-container">
+                <p>Social media:</p>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/svg/facebook.svg"
+                        alt="Facebook logo" title="Facebook" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/svg/instagram.svg"
+                        alt="Instagram logo" title="Instagram" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="images/svg/twitter.svg" alt="Twitter logo"
+                        title="Twitter" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="images/svg/youtube.svg" alt="YouTube logo"
+                        title="YouTube" height="25px" width="" class="naim-item-sm"></a>
+            </div>
+            <p>Website by Naim Baysal ©<br><a href="contact.html" class="naim-contact-knop">Contacteer ons</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-Trip | Detail (9/11 Memorial Park)</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="/js/script-memorial-park.js" defer></script>
+</head>
+
+<body>
+    <div class="naim-container">
+        <header>
+            <a href="index.html"><img src="/images/svg/logo.png" alt="logo" title="logo" class="naim-logo"></a>
+            <nav class="naim-navbar">
+                <a href="index.html">Home</a>
+                <a href="trips.html">Trips</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div id="naim-placeholder"></div>
+        </header>
+        <main>
+            <section class="naim-statue-liberty-section">
+                <article class="naim-info-article">
+                    <h1>9/11 Memorial Park</h1>
+                    <p>New York City kent helaas geen vlekkeloze geschiedenis. De aanslagen van 11 september 2001 kent
+                        iedereen en zijn een van de donkerste momenten van deze eeuw. Om de slachtoffers te eren, werd
+                        er op de plaats van de voormalige Twin Towers twee fonteinen gebouwd. De namen van de iedereen
+                        die gestorven is ten gevolge van de aanslag zijn gegraveerd op de fonteinen. Naast de fonteinen
+                        kunnen we niet alleen het 9/11 Memorial Museum bezoeken, maar ook het hoogste gebouw van de
+                        stad: het nieuwe World Trade Center. Op het observatiedek van het 541 meter lange gebouw is een
+                        uitzicht op heel Manhattan te bewonderen. Een niet te missen hoogtepunt dus.
+                    </p>
+                    <table class="naim-geolocatie">
+                        <tr>
+                            <th>Geolocatie</th>
+                            <th>Breedte(X)</th>
+                            <th>Lengte(Y)</th>
+                        </tr>
+                        <tr>
+                            <td>9/11 Memorial Park</td>
+                            <td>40.711615</td>
+                            <td>-74.012346</td>
+                        </tr>
+                    </table>
+                </article>
+                <article class="naim-form-article">
+                    <form action="#" method="GET">
+                        <textarea name="bericht" id="recensie" cols="30" rows="5"
+                            placeholder="Vul je recensie hier in..."></textarea><br>
+                        <input type="radio" name="like-dislike" id="like">Vind ik leuk<br>
+                        <input type="radio" name="like-dislike" id="dislike">Vind ik niet leuk<br><br>
+                        <button type="submit" id="verzend-knop2">Verzenden</button>
+                    </form>
+                </article>
+                <div id="memorial-park-img">
+                    <figure>
+                        <img src="/images/bezienswaardigheid_9-11memorialpark.jpg" alt="9/11 Memorial Park">
+                        <figcaption class="naim-trips-caption">Bron: © 9/11 Memorial / Joe Woolhead
+                        </figcaption>
+                    </figure>
+                </div>
+                <div id="memorial-park-map"></div>
+            </section>
+        </main>
+        <footer>
+            <div class="naim-item-container">
+                <p>Social media:</p>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/svg/facebook.svg"
+                        alt="Facebook logo" title="Facebook" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="images/svg/instagram.svg"
+                        alt="Instagram logo" title="Instagram" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="images/svg/twitter.svg" alt="Twitter logo"
+                        title="Twitter" height="25px" width="" class="naim-item-sm"></a>
+                <a href="https://www.youtube.com/" target="_blank"><img src="images/svg/youtube.svg" alt="YouTube logo"
+                        title="YouTube" height="25px" width="" class="naim-item-sm"></a>
+            </div>
+            <p>Website by Naim Baysal ©<br><a href="contact.html" class="naim-contact-knop">Contacteer ons</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>
